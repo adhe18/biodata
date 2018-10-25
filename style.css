@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+/* Style the header */
+header {
+    background-image: url("https://www.mackieharleydavidson.com/fckimages/Headers/18.jpg");
+    padding: 100px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 20%;
+    height: 400px; 
+    background-color: white;
+    padding: 20px;
+    margin-top: 7px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 79%;
+    background-color: #f1f1f1;
+    height: 400px;
+    font-size: 20px;
+    margin-left: 7px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+footer {
+    float: left;
+    background-color: white;
+    padding: 10px;
+    text-align: left;
+    color: black;
+    
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
